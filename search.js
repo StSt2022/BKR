@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchTitle.innerHTML = `Результати пошуку для: "<strong>${query}</strong>"`;
 
-    // Фільтруємо товари. Робимо пошук нечутливим до регістру
     const lowerCaseQuery = query.toLowerCase();
     const results = products.filter(product => 
         product.name.toLowerCase().includes(lowerCaseQuery) ||
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (results.length > 0) {
         results.forEach(product => {
-            // Використовуємо той самий код для генерації карточки, що й в catalog.js
             resultsGrid.innerHTML += `
                 <a href="product.html?id=${product.id}" class="product-card-link">
                     <div class="catalog-card"> 

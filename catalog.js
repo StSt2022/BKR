@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!productGrid || !categoryTitle || !mainElement) return;
 
-    // Розширюємо наш словник, додаючи кольори та CSS-класи
     const categoryData = {
         cleaning: { name: "Засоби для прибирання", colorClass: "category-cleaning" },
         cosmetics: { name: "Косметика та парфумерія", colorClass: "category-cosmetics" },
@@ -25,18 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     <span>${currentCategoryData.name}</span>
     `;
 
-    // Встановлюємо заголовок сторінки
     categoryTitle.textContent = currentCategoryData.name;
 
-    // ДОДАЄМО CSS-КЛАС ДО <main>
     mainElement.classList.add(currentCategoryData.colorClass);
 
-    // Фільтруємо товари
     const filteredProducts = category
         ? products.filter(p => p.category === category)
         : products;
 
-    // Генеруємо HTML для товарів (цей блок без змін)
     if (filteredProducts.length > 0) {
         let allCardsHTML = '';
         filteredProducts.forEach(product => {

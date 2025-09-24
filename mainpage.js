@@ -25,27 +25,23 @@ function initializeLiveSearch() {
     const searchResultsContainer = document.getElementById('search-results');
     if (!searchInput || !searchResultsContainer) return;
 
-    // "Слухаємо" кожне введення символу
     searchInput.addEventListener('input', () => {
         const query = searchInput.value.trim().toLowerCase();
         
-        // Очищуємо результати, якщо поле порожнє
-        if (query.length < 2) { // Починаємо пошук після введення 2-х символів
+        if (query.length < 2) {
             searchResultsContainer.innerHTML = '';
             searchResultsContainer.style.display = 'none';
             return;
         }
 
-        // Фільтруємо товари
         const results = products.filter(product =>
             product.name.toLowerCase().includes(query)
         );
 
-        // Очищуємо попередні результати
         searchResultsContainer.innerHTML = '';
 
         if (results.length > 0) {
-            results.slice(0, 5).forEach(product => { // Показуємо не більше 5 результатів
+            results.slice(0, 5).forEach(product => {
                 const itemHTML = `
                     <a href="product.html?id=${product.id}" class="search-result-item">
                         <img src="${product.image}" alt="${product.name}" class="search-result-image">
@@ -64,7 +60,6 @@ function initializeLiveSearch() {
         }
     });
 
-    // Ховаємо результати, якщо клікнути десь на сторінці
     document.addEventListener('click', (event) => {
         if (!event.target.closest('.search-container')) {
             searchResultsContainer.style.display = 'none';
@@ -72,10 +67,9 @@ function initializeLiveSearch() {
     });
 }
 
-// Головна точка входу: чекаємо, поки завантажиться хедер
 document.addEventListener('componentLoaded', function(event) {
     if (event.detail.selector === '#header-placeholder') {
         initializeBurgerMenu();
-        initializeLiveSearch(); // Запускаємо ініціалізацію пошуку
+        initializeLiveSearch();
     }
 });

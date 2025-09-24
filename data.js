@@ -177,11 +177,6 @@ const products = [
     }
 ];
 
-// data.js
-
-// ... ваш масив `products` ...
-
-// Дані нашого "залогіненого" користувача
 const loggedInUser = {
     firstName: "Іван",
     lastName: "Петренко",

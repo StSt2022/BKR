@@ -18,7 +18,6 @@
         <main class="checkout-page">
             <h1>Оформлення замовлення</h1>
             <div class="checkout-grid">
-                <!-- Ліва колонка: Форма замовлення -->
                 <div class="checkout-form">
                     <section>
                         <h2>1. Контактні дані</h2>
@@ -36,18 +35,14 @@
                         </div>
                     </section>
 
-                    <!-- НОВИЙ БЛОК: ДОСТАВКА -->
-                    <!-- У ФАЙЛІ checkout.html -->
                     <section>
                         <h2>2. Доставка</h2>
                         <div class="radio-group">
-                            <!-- Нова Пошта -->
                             <label class="radio-label">
                                 <input type="radio" name="delivery" value="nova-poshta" checked required>
                                 <span class="radio-custom"></span>
                                 Нова Пошта
                             </label>
-                            <!-- Поля, що з'являються при виборі Нової Пошти -->
                             <div id="nova-poshta-fields" class="delivery-fields">
                                 <div class="form-group">
                                     <label for="city">Місто</label>
@@ -59,14 +54,11 @@
                                 </div>
                             </div>
 
-                            <!-- ПРАВИЛЬНИЙ КОД -->
                             <label class="radio-label">
-                                <!-- 1. Змінюємо value -->
                                 <input type="radio" name="delivery" value="ukrposhta" required>
                                 <span class="radio-custom"></span>
                                 Укр Пошта
                             </label>
-                            <!-- 2. Змінюємо ID і ховаємо блок за замовчуванням -->
                             <div id="ukrposhta-fields" class="delivery-fields" style="display: none;">
                                 <div class="form-group">
                                     <label for="city-ukr">Місто</label>
@@ -78,13 +70,11 @@
                                 </div>
                             </div>
 
-                            <!-- Кур'єр -->
                             <label class="radio-label">
                                 <input type="radio" name="delivery" value="courier" required>
                                 <span class="radio-custom"></span>
                                 Кур'єром по місту
                             </label>
-                            <!-- Поля для кур'єра -->
                             <div id="courier-fields" class="delivery-fields" style="display: none;">
                                 <div class="form-group">
                                     <label for="address">Ваша адреса</label>
@@ -100,9 +90,6 @@
                         </div>
                     </section>
 
-                    <!-- ... секція Оплата ... -->
-
-                    <!-- НОВИЙ БЛОК: ОПЛАТА -->
                     <section>
                         <h2>3. Оплата</h2>
                         <div class="radio-group">
@@ -120,7 +107,6 @@
                     </section>
                 </div>
 
-                <!-- Права колонка: Склад замовлення (без змін) -->
                 <div class="order-summary">
                     <h2>Ваше замовлення</h2>
                     <div id="summary-items-container"></div>
@@ -140,7 +126,7 @@
     <script src="components.js"></script>
     <script src="mainpage.js"></script>
     <script src="cart.js"></script>
-    <script src="checkout.js"></script> <!-- Специфічний скрипт -->
+    <script src="checkout.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,3 @@
-// Файл: components.js
-
 document.addEventListener("DOMContentLoaded", function () {
     const loadComponent = (selector, url) => {
         const element = document.querySelector(selector);

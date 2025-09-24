@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Заповнюємо форму даними "залогіненого" користувача
     if (typeof loggedInUser !== 'undefined') {
         document.getElementById('firstName').value = loggedInUser.firstName;
         document.getElementById('lastName').value = loggedInUser.lastName;
         document.getElementById('phone').value = loggedInUser.phone;
     }
 
-    // 2. Відображаємо товари з кошика
     const summaryContainer = document.getElementById('summary-items-container');
     const summaryTotalEl = document.getElementById('summary-total');
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -28,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         summaryTotalEl.textContent = `${total} грн`;
     }
 
-    // --- Логіка для перемикання полів доставки ---
     const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
     const novaPoshtaFields = document.getElementById('nova-poshta-fields');
     const ukrposhtaFields = document.getElementById('ukrposhta-fields'); // Знаходимо новий блок
@@ -38,12 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
         radio.addEventListener('change', (event) => {
             const selectedDelivery = event.target.value;
 
-            // Ховаємо всі блоки полів
             novaPoshtaFields.style.display = 'none';
             ukrposhtaFields.style.display = 'none';
             courierFields.style.display = 'none';
 
-            // Показуємо тільки той, що відповідає обраній опції
             if (selectedDelivery === 'nova-poshta') {
                 novaPoshtaFields.style.display = 'block';
             } else if (selectedDelivery === 'ukrposhta') {
@@ -54,7 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Викликаємо подію 'change' на обраному за замовчуванням елементі,
-    // щоб показати відповідні поля при завантаженні сторінки
     document.querySelector('input[name="delivery"]:checked').dispatchEvent(new Event('change'));
 });

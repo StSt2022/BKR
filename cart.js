@@ -17,7 +17,7 @@ function renderCart() {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     let total = 0;
-    cartItemsContainer.innerHTML = ''; // Очищуємо контейнер перед рендерингом
+    cartItemsContainer.innerHTML = '';
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = '<p class="empty-cart-message">Ваш кошик порожній.</p>';
@@ -28,7 +28,6 @@ function renderCart() {
                 const itemTotal = product.price * cartItem.quantity;
                 total += itemTotal;
                 
-                // НОВИЙ ВАРІАНТ
                 cartItemsContainer.innerHTML += `
                     <div class="cart-item">
                         <img src="${product.image}" alt="${product.name}">
@@ -51,7 +50,7 @@ function renderCart() {
 
     cartTotalSpan.textContent = total;
     updateCartCounter();
-    addCartActionListeners(); // Додаємо обробники подій до нових кнопок
+    addCartActionListeners();
 }
 
 // Функція, яка додає обробники подій до кнопок +/-
@@ -76,7 +75,6 @@ function updateQuantity(productId, action) {
             cart[productIndex].quantity++;
         } else if (action === 'decrease') {
             cart[productIndex].quantity--;
-            // Якщо кількість стає 0, видаляємо товар з кошика
             if (cart[productIndex].quantity === 0) {
                 cart.splice(productIndex, 1);
             }
@@ -84,21 +82,15 @@ function updateQuantity(productId, action) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    renderCart(); // Перемальовуємо весь кошик з новими даними
+    renderCart();
 }
 
-
-// --- Точка входу для скрипта ---
-
-// Оновлюємо лічильник, коли завантажується хедер
 document.addEventListener('componentLoaded', function(event) {
     if (event.detail.selector === '#header-placeholder') {
         updateCartCounter();
     }
 });
 
-// Якщо ми на сторінці кошика, запускаємо її рендеринг
 if (window.location.pathname.endsWith('cart.html')) {
-    // Чекаємо, поки завантажиться DOM, щоб знайти елементи
     document.addEventListener('DOMContentLoaded', renderCart);
 }
