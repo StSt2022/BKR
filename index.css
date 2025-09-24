@@ -25,7 +25,6 @@ html {
     scroll-padding-top: 50px;
 }
 
-/* Загальний стиль для всіх кнопок та полів вводу */
 button,
 input,
 select {
@@ -39,9 +38,7 @@ select {
 
 a.logo {
     text-decoration: none;
-    /* Прибираємо підкреслення */
     color: #333;
-    /* Встановлюємо колір тексту (такий самий, як у звичайного) */
 }
 
 header .search-bar-top {
@@ -122,12 +119,10 @@ main {
 .hero h1 {
     font-size: 48px;
     margin: 0 0 20px 0;
-    font-weight: 600; /* Повернемо менш жирний, він краще виглядає */
+    font-weight: 600;
     
-    /* 1. Робимо колір трохи темнішим для кращого контрасту */
-    color: #404040; /* Глибокий, але не чорний сірий */
+    color: #404040;
 
-    /* 2. Додаємо ОДНУ м'яку, ледь помітну тінь */
     text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -227,7 +222,6 @@ main {
 
 .delivery-promo {
     background-color: #f7f5f2;
-    /* Колір як у фону сторінки */
     border: 1px solid #e0e0e0;
     text-align: center;
     display: flex;
@@ -253,7 +247,6 @@ main {
     line-height: 1.6;
     color: #666;
     max-width: 80%;
-    /* Щоб текст не розтягувався на всю ширину */
     margin: 0;
 }
 
@@ -270,13 +263,9 @@ main {
 
 .product-card>img {
     width: 100%;
-    /* Розтягуємо на всю доступну ширину всередині картки */
     height: auto;
-    /* Задаємо фіксовану висоту для всіх карток */
     object-fit: cover;
-    /* Масштабує зображення, щоб воно повністю покрило блок, зберігаючи пропорції (може трохи обрізати) */
     border-radius: 15px;
-    /* Додаємо заокруглені кути, трохи менші, ніж у самої картки */
     margin-bottom: 20px;
 }
 
@@ -314,8 +303,6 @@ main {
 
 @media (max-width: 900px) {
 
-    /* --- ШАПКА --- */
-    /* Ховаємо десктопне меню (весь блок посилань) */
     .mobile-menu-container .user-menu {
         display: none;
     }
@@ -323,34 +310,27 @@ main {
     .search-bar-top {
         margin: 0 20px;
         min-width: 230px;
-        /* Мінімальна ширина для пошуку */
     }
 
     .burger-menu {
         display: flex;
     }
 
-    /* --- КОНТЕЙНЕР ДЛЯ МОБІЛЬНОГО МЕНЮ --- */
     .mobile-menu-container {
         position: relative;
-        /* Ховаємо десктопні посилання, які йдуть в ряд */
         display: block;
     }
 
     .mobile-menu-container>.user-menu a {
         margin-left: 0;
-        /* Прибираємо десктопний відступ */
     }
 
-    /* --- ВИПАДАЮЧЕ МЕНЮ (яке з'являється по кліку) --- */
     .user-menu {
         position: absolute;
         top: calc(100% + 10px);
-        /* 100% висоти кнопки + 10px відступу */
         right: 0;
 
         width: max-content;
-        /* Ширина по найдовшому елементу всередині */
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -371,13 +351,11 @@ main {
 
     .user-menu.is-active {
         display: flex;
-        /* Робимо видимим */
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
     }
 
-    /* ФІНАЛЬНИЙ ПРАВИЛЬНИЙ ВАРІАНТ */
     .user-menu a {
         display: flex;
         align-items: center;
@@ -385,18 +363,13 @@ main {
         margin-left: 0;
         padding: 8px 12px;
         border-radius: 6px;
-        /* <--- ЗАЛИШАЄМО, це заокруглює фон */
-        /* width: 100%;  <--- ПРИБИРАЄМО ЦЕЙ РЯДОК */
         transition: background-color 0.2s ease;
     }
 
-    /* Додаємо ефект при наведенні */
     .user-menu a:hover {
         background-color: #f5f5f5;
     }
 
-
-    /* --- ОСНОВНИЙ КОНТЕНТ --- */
     .promo-blocks,
     .product-showcase {
         grid-template-columns: 1fr;
@@ -425,7 +398,6 @@ main {
 
 .site-footer {
     background-color: #fff;
-    /* <--- ОСЬ РІШЕННЯ */
     padding: 60px 40px 20px 40px;
     border-top: 1px solid #e0e0e0;
     color: #333;
@@ -434,7 +406,6 @@ main {
 .pre-footer-strip {
     height: 10px;
     background-color: #f7f5f2;
-    /* Беремо колір з блоку акції для гармонії */
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -442,7 +413,6 @@ main {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 рівні колонки */
     gap: 30px;
 }
 
@@ -514,24 +484,19 @@ main {
     color: #666;
 }
 
-
-/* --- Адаптивність для футера --- */
 @media (max-width: 900px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
-        /* 2 колонки на планшетах */
     }
 }
 
 @media (max-width: 500px) {
     .footer-container {
         grid-template-columns: 1fr;
-        /* 1 колонка на мобільних */
     }
 
     .footer-bottom {
         flex-direction: column;
-        /* Складаємо іконки і текст один під одним */
         gap: 20px;
     }
 }
@@ -541,29 +506,19 @@ main {
 HOVER-ЕФЕКТИ
 ========================================
 */
-
-/* 1. Додаємо плавність переходу для елементів */
-
-/* Для іконок категорій */
 .category-item .icon-bg {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Для карток товарів */
 .product-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
-/* 2. Самі ефекти при наведенні миші */
-
-/* Ефект для категорій: легке збільшення та тінь */
 .category-item:hover .icon-bg {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Ефект для карток товарів: "підняття" та тінь */
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
@@ -576,22 +531,17 @@ HOVER-ЕФЕКТИ
     border-bottom: 1px solid #e0e0e0;
 }
 
-/* І треба скоригувати відступи для .categories всередині */
 .categories {
     margin-top: 40px;
-    /* Прибираємо старі відступи */
     padding: 0 80px;
-    /* Додаємо бокові відступи, як у <main> */
 }
 
-/* Робить всю картку клікабельною */
 .product-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* Переносимо hover-ефект з .product-card на посилання */
 .product-card-link .product-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -601,7 +551,6 @@ HOVER-ЕФЕКТИ
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Прибираємо старий hover-ефект, якщо він є */
 .product-card:hover {
     transform: none;
     box-shadow: none;
@@ -610,62 +559,44 @@ HOVER-ЕФЕКТИ
 .category-item-link {
     text-decoration: none;
     color: inherit;
-    /* Успадковує колір від батьківського елемента */
 }
 
 /*
 ========================================
-СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ (ОНОВЛЕНО)
-========================================
-*/
-/*
-========================================
-СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ (ВИПРАВЛЕНО)
+СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ
 ========================================
 */
 .catalog-main {
     padding: 40px;
-    /* <--- ТЕПЕР ВІДСТУПИ ТАКІ Ж, ЯК НА ІНШИХ СТОРІНКАХ */
 }
 
-/* Додаємо стилі для заголовка, щоб він був таким же, як на інших сторінках */
 .catalog-main h1 {
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 30px;
 }
 
-/* НОВИЙ АДАПТИВНИЙ ВАРІАНТ */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Стиль за замовчуванням (для десктопів) */
     gap: 30px;
 }
 
-/* Стилі для екранів, вужчих за 900px (планшети) */
 @media (max-width: 1000px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* 2 колонки */
     }
 }
 
-/* Стилі для екранів, вужчих за 500px (мобільні телефони) */
 @media (max-width: 600px) {
     .product-grid {
         grid-template-columns: 1fr;
-        /* 1 колонка */
     }
 }
 
-/* СТИЛІ ДЛЯ НОВОГО КОМПОНЕНТА: КАРТОЧКА ТОВАРУ В КАТАЛОЗІ */
-
 .catalog-card {
     background-color: #fef3f3;
-    /* Дуже світлий, ледь помітний рожевий */
     border: 2px solid #EAEAEA;
-    /* Трохи темніша, але все ще м'яка рамка */
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -683,9 +614,7 @@ HOVER-ЕФЕКТИ
 .catalog-card-image {
     width: 100%;
     border: 1px solid #EAEAEA;
-    /* Трохи темніша, але все ще м'яка рамка */
     height: 210px;
-    /* Фіксована висота для однакового вигляду */
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -695,9 +624,7 @@ HOVER-ЕФЕКТИ
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    /* Обмежуємо назву двома рядками, щоб уникнути "стрибків" висоти */
     height: 2.4em;
-    /* Приблизна висота для двох рядків */
     line-height: 1.2em;
     overflow: hidden;
 }
@@ -714,6 +641,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СТОРІНКИ ТОВАРУ
 ========================================
 */
+
 .product-page {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -762,11 +690,9 @@ HOVER-ЕФЕКТИ
     background-color: #555;
 }
 
-/* Адаптивність для сторінки товару */
 @media (max-width: 768px) {
     .product-page {
         grid-template-columns: 1fr;
-        /* Одна колонка на мобільних */
     }
 }
 
@@ -775,6 +701,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СТОРІНКИ КОШИКА
 ========================================
 */
+
 .cart-page {
     padding: 40px;
 }
@@ -789,10 +716,8 @@ HOVER-ЕФЕКТИ
     border-top: 1px solid #e0e0e0;
 }
 
-/* СТИЛІ ДЛЯ ОДНОГО ТОВАРУ В КОШИКУ */
 .cart-item {
     display: grid;
-    /* Фото | Інфо | Ціна | Видалення */
     grid-template-columns: 150px 1fr auto auto;
     gap: 30px;
     align-items: center;
@@ -802,9 +727,7 @@ HOVER-ЕФЕКТИ
 
 .cart-item img {
     width: 150px;
-    /* Збільшуємо ширину */
     height: 110px;
-    /* І висоту */
     object-fit: cover;
     border-radius: 8px;
 }
@@ -821,14 +744,11 @@ HOVER-ЕФЕКТИ
     text-align: right;
 }
 
-/* КНОПКИ ЗМІНИ КІЛЬКОСТІ */
 .quantity-controls {
     display: flex;
     align-items: center;
     gap: 12px;
-    /* Трохи збільшимо простір */
     color: #666;
-    /* Робимо текст трохи світлішим, щоб він не конкурував з назвою */
 }
 
 .quantity-btn {
@@ -846,7 +766,6 @@ HOVER-ЕФЕКТИ
     font-weight: 500;
 }
 
-/* КНОПКА ВИДАЛЕННЯ */
 .remove-item-btn {
     width: 30px;
     height: 30px;
@@ -864,7 +783,6 @@ HOVER-ЕФЕКТИ
     background-color: #f0f0f0;
 }
 
-/* ПІДСУМОК */
 .cart-summary {
     margin-top: 40px;
     text-align: right;
@@ -886,9 +804,7 @@ HOVER-ЕФЕКТИ
     cursor: pointer;
     transition: background-color 0.2s ease;
     display: inline-block;
-    /* Для посилань краще вказати явно */
     text-decoration: none;
-    /* <--- ДОДАЙТЕ ЦЕЙ РЯДОК */
 }
 
 .checkout-button:hover {
@@ -907,6 +823,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СТОРІНКИ ПРОФІЛЮ
 ========================================
 */
+
 .profile-page {
     padding: 40px;
 }
@@ -931,7 +848,6 @@ HOVER-ЕФЕКТИ
 
 .profile-card.full-width {
     grid-column: 1 / -1;
-    /* Розтягуємо на всю ширину */
 }
 
 .profile-card h2 {
@@ -956,7 +872,6 @@ HOVER-ЕФЕКТИ
     margin-bottom: 0;
 }
 
-/* СТИЛІ ДЛЯ ТАБЛИЦІ ЗАМОВЛЕНЬ */
 #order-history-table {
     width: 100%;
     border-collapse: collapse;
@@ -973,7 +888,6 @@ HOVER-ЕФЕКТИ
     font-weight: 600;
 }
 
-/* СТИЛІ ДЛЯ КНОПОК */
 .edit-btn,
 .add-btn {
     background-color: transparent;
@@ -1001,21 +915,17 @@ HOVER-ЕФЕКТИ
 .profile-data-grid {
     display: grid;
     grid-template-columns: auto 1fr;
-    /* Перша колонка по ширині контенту, друга займає решту */
     gap: 10px 20px;
-    /* 10px по вертикалі, 20px по горизонталі */
     align-items: center;
 }
 
 .data-label {
     font-weight: 600;
-    /* Робимо мітки жирними */
     color: #333;
 }
 
 .data-value {
     color: #666;
-    /* Робимо самі дані трохи світлішими */
 }
 
 /*
@@ -1023,14 +933,13 @@ HOVER-ЕФЕКТИ
 АДАПТИВНІСТЬ ДЛЯ СТОРІНКИ ПРОФІЛЮ
 ========================================
 */
+
 @media (max-width: 768px) {
     .profile-grid {
-        /* Замість двох колонок робимо одну */
         grid-template-columns: 1fr;
     }
 
     .profile-page {
-        /* Зменшуємо бокові відступи на мобільних */
         padding: 20px;
     }
 }
@@ -1040,6 +949,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СТОРІНКИ ОФОРМЛЕННЯ ЗАМОВЛЕННЯ
 ========================================
 */
+
 .checkout-page {
     padding: 40px;
 }
@@ -1053,7 +963,6 @@ HOVER-ЕФЕКТИ
 .checkout-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* Ліва колонка вдвічі ширша за праву */
     gap: 40px;
 }
 
@@ -1084,7 +993,6 @@ HOVER-ЕФЕКТИ
     border: 1px solid #ddd;
     border-radius: 8px;
     box-sizing: border-box;
-    /* Важливо для правильної ширини */
 }
 
 .order-summary {
@@ -1093,7 +1001,6 @@ HOVER-ЕФЕКТИ
     border-radius: 15px;
     border: 1px solid #e0e0e0;
     height: fit-content;
-    /* Висота по вмісту */
 }
 
 .order-summary h2 {
@@ -1118,13 +1025,10 @@ HOVER-ЕФЕКТИ
 
 .order-summary .confirm-order-btn {
     display: block;
-    /* Залишаємо, щоб кнопка була блоковою */
-    /* width: 100%; - ПРИБИРАЄМО ЦЕЙ РЯДОК */
     background-color: #333;
     color: #fff !important;
     border: none;
     padding: 15px 40px;
-    /* Додамо більше бокового паддінгу для кращого вигляду */
     font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
@@ -1133,10 +1037,8 @@ HOVER-ЕФЕКТИ
     text-align: center;
     transition: background-color 0.2s ease;
     margin: 0 auto;
-    /* <--- ДОДАЄМО ЦЕЙ РЯДОК ДЛЯ ЦЕНТРУВАННЯ */
 }
 
-/* Додаємо hover-ефект */
 .order-summary .confirm-order-btn:hover {
     background-color: #555;
 }
@@ -1146,6 +1048,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ ОПЦІЙ ВИБОРУ (РАДІОКНОПКИ)
 ========================================
 */
+
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -1166,12 +1069,10 @@ HOVER-ЕФЕКТИ
     border-color: #aaa;
 }
 
-/* Ховаємо стандартну радіокнопку */
 .radio-label input[type="radio"] {
     display: none;
 }
 
-/* Створюємо власну "кастомну" радіокнопку */
 .radio-custom {
     width: 20px;
     height: 20px;
@@ -1184,7 +1085,6 @@ HOVER-ЕФЕКТИ
     transition: border-color 0.2s ease;
 }
 
-/* Створюємо внутрішню крапку, яка з'являється при виборі */
 .radio-custom::after {
     content: '';
     width: 10px;
@@ -1192,18 +1092,15 @@ HOVER-ЕФЕКТИ
     background-color: #333;
     border-radius: 50%;
     transform: scale(0);
-    /* Початковий стан - невидима */
     transition: transform 0.2s ease;
 }
 
-/* Коли радіокнопка обрана, змінюємо стилі */
 .radio-label input[type="radio"]:checked+.radio-custom {
     border-color: #333;
 }
 
 .radio-label input[type="radio"]:checked+.radio-custom::after {
     transform: scale(1);
-    /* Робимо крапку видимою */
 }
 
 .radio-label:has(input:checked) {
@@ -1211,10 +1108,8 @@ HOVER-ЕФЕКТИ
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-/* ДОДАЙТЕ ЦЕ В КІНЕЦЬ index.css */
 .delivery-fields {
     padding-left: 35px;
-    /* Відступ, щоб поля були під текстом радіокнопки */
     margin-top: 10px;
     margin-bottom: 10px;
     border-left: 2px solid #f0f0f0;
@@ -1225,6 +1120,7 @@ HOVER-ЕФЕКТИ
 АДАПТИВНІСТЬ ДЛЯ СТОРІНКИ ОФОРМЛЕННЯ
 ========================================
 */
+
 @media (max-width: 900px) {
     .checkout-grid {
         grid-template-columns: 1fr;
@@ -1232,11 +1128,8 @@ HOVER-ЕФЕКТИ
 
     .order-summary {
         grid-row: 2;
-        /* ДОДАЄМО ЦІ СТИЛІ */
         margin-top: 20px;
-        /* Невеликий відступ зверху на мобільних */
         padding: 20px;
-        /* Зменшуємо паддінги для мобільних */
     }
 
     .confirm-order-btn {
@@ -1250,13 +1143,13 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СТОРІНКИ ПОДЯКИ
 ========================================
 */
+
 .thank-you-body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f7f5f2;
-    /* Той самий фон, що й на інших сторінках */
 }
 
 .thank-you-container {
@@ -1267,11 +1160,8 @@ HOVER-ЕФЕКТИ
     text-align: center;
     max-width: 500px;
     width: 100%;
-    /* <--- ЗМІНЮЄМО НА 100% */
     box-sizing: border-box;
-    /* <--- ДОДАЄМО ЦЕЙ РЯДОК */
     margin: 0 20px;
-    /* <--- І ДОДАЄМО ЦЕЙ РЯДОК */
 }
 
 .thank-you-icon {
@@ -1313,18 +1203,15 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ "ЖИВОГО" ПОШУКУ
 ========================================
 */
+
 .search-container {
     position: relative;
-    /* Важливо для позиціонування випадаючого списку */
     margin: 0 40px;
-    /* Зберігаємо відступи */
 }
 
-/* Сам випадаючий список */
 .search-results-list {
     position: absolute;
     top: 100%;
-    /* З'являється одразу під полем пошуку */
     left: 0;
     right: 0;
     background-color: #fff;
@@ -1336,10 +1223,8 @@ HOVER-ЕФЕКТИ
     max-height: 400px;
     overflow-y: auto;
     display: none;
-    /* Спочатку прихований */
 }
 
-/* Один елемент у списку результатів */
 .search-result-item {
     display: flex;
     align-items: center;
@@ -1386,6 +1271,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ КНОПОК НА ГОЛОВНОМУ БАНЕРІ
 ========================================
 */
+
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -1400,14 +1286,10 @@ HOVER-ЕФЕКТИ
     border-radius: 50px;
     text-decoration: none;
     border: 2px solid #333;
-    /* Тепер обидві мають рамку */
     transition: all 0.3s ease;
     text-align: center;
-    /* Центруємо текст одразу */
     flex-grow: 1;
-    /* Змушує обидві кнопки розтягнутися */
     max-width: 250px;
-    /* Але обмежуємо максимальну ширину */
 }
 
 .primary-btn,
@@ -1422,15 +1304,11 @@ HOVER-ЕФЕКТИ
     border-color: #555;
 }
 
-/* Адаптивність для кнопок на банері */
 @media (max-width: 500px) {
     .hero-actions {
         flex-direction: column;
         align-items: stretch;
-        /* Розтягуємо елементи по ширині */
     }
-
-    /* .hero-btn тут не потребує змін, бо align-items: stretch вже розтягне посилання */
 }
 
 /*
@@ -1438,28 +1316,24 @@ HOVER-ЕФЕКТИ
 АДАПТИВНІСТЬ ДЛЯ ГОЛОВНОГО БАНЕРА
 ========================================
 */
+
 @media (max-width: 768px) {
     .hero {
         padding: 40px 30px;
-        /* Зменшуємо внутрішні відступи */
         text-align: center;
-        /* Центруємо весь текст */
     }
 
     .hero-content {
         max-width: 100%;
-        /* Дозволяємо контенту зайняти всю ширину */
     }
 
     .hero h1 {
         font-size: 36px;
         font-weight: 600;
-        /* Значно зменшуємо розмір заголовка */
     }
 
     .hero-actions {
         justify-content: center;
-        /* Центруємо кнопки */
     }
 }
 
@@ -1469,38 +1343,33 @@ HOVER-ЕФЕКТИ
 ========================================
 */
 
-/* --- Косметика (рожевий) --- */
 .category-cosmetics .catalog-card {
-    background-color: #FFF5F5; /* Дуже світлий рожевий */
-    border-color: #FFDFDF;     /* Трохи темніший рожевий для рамки */
+    background-color: #FFF5F5;
+    border-color: #FFDFDF;
 }
 
-/* --- Прибирання (зелений) --- */
 .category-cleaning .catalog-card {
-    background-color: #F6FFF5; /* Дуже світлий зелений */
-    border-color: #DFFFE0;     /* Трохи темніший зелений для рамки */
+    background-color: #F6FFF5;
+    border-color: #DFFFE0;
 }
 
-/* --- Особиста гігієна (блакитний) --- */
 .category-hygiene .catalog-card {
-    background-color: #F5FCFF; /* Дуже світлий блакитний */
-    border-color: #DFEEFF;     /* Трохи темніший блакитний для рамки */
+    background-color: #F5FCFF;
+    border-color: #DFEEFF;   
 }
 
-/* --- Господарські товари (фіолетовий) --- */
 .category-household .catalog-card {
-    background-color: #FBF5FF; /* Дуже світлий фіолетовий */
-    border-color: #EEDBFF;     /* Трохи темніший фіолетовий для рамки */
+    background-color: #FBF5FF; 
+    border-color: #EEDBFF;   
 }
 
-/* --- Стиль за замовчуванням (для загального каталогу) --- */
 .category-default .catalog-card {
-    background-color: #FAFAFA; /* Нейтральний світло-сірий */
+    background-color: #FAFAFA; 
     border-color: #EAEAEA;
 }
 
 .breadcrumbs-catalog {
-    margin-bottom: 30px; /* Замість padding, використовуємо margin для зовнішнього відступу */
+    margin-bottom: 30px;
     font-size: 14px;
     color: #666;
 }
@@ -1510,9 +1379,7 @@ HOVER-ЕФЕКТИ
     font-size: 14px;
     color: #666;
 }
-/* ПРАВИЛЬНИЙ КОД */
 
-/* Застосовуємо стилі до посилань <a> всередині ОБОХ класів */
 .breadcrumbs-catalog a, 
 .breadcrumbs-product a {
     color: #333;
@@ -1520,7 +1387,6 @@ HOVER-ЕФЕКТИ
     transition: text-decoration 0.2s ease;
 }
 
-/* Застосовуємо hover-ефект до посилань <a> всередині ОБОХ класів */
 .breadcrumbs-catalog a:hover, 
 .breadcrumbs-product a:hover {
     text-decoration: underline;
@@ -1535,6 +1401,7 @@ HOVER-ЕФЕКТИ
 СТИЛІ ДЛЯ СПОВІЩЕНЬ (TOASTS)
 ========================================
 */
+
 #toast-container {
     position: fixed;
     top: 20px;
