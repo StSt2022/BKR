@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мій профіль - СЯЙВО</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header id="header-placeholder"></header>
+
+        <main class="profile-page">
+            <h1>Особистий кабінет</h1>
+            <div class="profile-grid">
+                <!-- Блок з особистими даними -->
+                <!-- ПРАВИЛЬНИЙ НОВИЙ ВАРІАНТ -->
+                <div class="profile-card">
+                    <h2>Особисті дані</h2>
+                    <div class="profile-data-grid">
+                        <span class="data-label">Ім'я:</span>
+                        <span id="user-firstname" class="data-value"></span>
+
+                        <span class="data-label">Прізвище:</span>
+                        <span id="user-lastname" class="data-value"></span>
+
+                        <span class="data-label">Email:</span>
+                        <span id="user-email" class="data-value"></span>
+
+                        <span class="data-label">Телефон:</span>
+                        <span id="user-phone" class="data-value"></span>
+                    </div>
+                    <button class="edit-btn">Редагувати</button>
+                </div>
+
+                <!-- Блок з адресами -->
+                <div class="profile-card">
+                    <h2>Адреси доставки</h2>
+                    <div id="user-addresses">
+                        <!-- Адреси будуть вставлені сюди -->
+                    </div>
+                    <button class="add-btn">Додати нову адресу</button>
+                </div>
+
+                <!-- Блок з історією замовлень -->
+                <div class="profile-card full-width">
+                    <h2>Мої замовлення</h2>
+                    <table id="order-history-table">
+                        <thead>
+                            <tr>
+                                <th>Номер замовлення</th>
+                                <th>Дата</th>
+                                <th>Сума</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Рядки замовлень будуть вставлені сюди -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- Підключаємо скрипти -->
+    <script src="data.js"></script>
+    <script src="components.js"></script>
+    <script src="mainpage.js"></script>
+    <script src="cart.js"></script>
+    <script src="profile.js"></script> <!-- Новий скрипт для цієї сторінки -->
+</body>
+
+</html>

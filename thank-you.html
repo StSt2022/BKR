@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дякуємо за замовлення! - СЯЙВО</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="thank-you-body">
+
+    <div class="thank-you-container">
+        <img src="images/checked.png" alt="Успішно" class="thank-you-icon">
+        <h1 class="thank-you-title">Дякуємо!</h1>
+        <p class="thank-you-text">Ваше замовлення <strong id="order-number"></strong> успішно оформлено. Ми зв'яжемося з вами найближчим часом для підтвердження деталей.</p>
+        <a href="index.html" class="back-to-home-btn">Повернутися на головну</a>
+    </div>
+
+    <!-- Підключаємо скрипти -->
+    <!-- data.js та cart.js потрібні для updateCartCounter() -->
+    <script src="data.js"></script>
+    <script src="cart.js"></script> 
+    <script src="thank-you.js"></script> 
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформлення замовлення - СЯЙВО</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header id="header-placeholder"></header>
+
+        <main class="checkout-page">
+            <h1>Оформлення замовлення</h1>
+            <div class="checkout-grid">
+                <!-- Ліва колонка: Форма замовлення -->
+                <div class="checkout-form">
+                    <section>
+                        <h2>1. Контактні дані</h2>
+                        <div class="form-group">
+                            <label for="firstName">Ім'я</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Іван" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Прізвище</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Петренко" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+380991234567" required>
+                        </div>
+                    </section>
+
+                    <!-- НОВИЙ БЛОК: ДОСТАВКА -->
+                    <!-- У ФАЙЛІ checkout.html -->
+                    <section>
+                        <h2>2. Доставка</h2>
+                        <div class="radio-group">
+                            <!-- Нова Пошта -->
+                            <label class="radio-label">
+                                <input type="radio" name="delivery" value="nova-poshta" checked required>
+                                <span class="radio-custom"></span>
+                                Нова Пошта
+                            </label>
+                            <!-- Поля, що з'являються при виборі Нової Пошти -->
+                            <div id="nova-poshta-fields" class="delivery-fields">
+                                <div class="form-group">
+                                    <label for="city">Місто</label>
+                                    <input type="text" id="city" name="city" placeholder="Наприклад, Київ" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-office">Номер відділення або поштомату</label>
+                                    <input type="text" id="post-office" name="post-office" placeholder="Наприклад, 142" required>
+                                </div>
+                            </div>
+
+                            <!-- ПРАВИЛЬНИЙ КОД -->
+                            <label class="radio-label">
+                                <!-- 1. Змінюємо value -->
+                                <input type="radio" name="delivery" value="ukrposhta" required>
+                                <span class="radio-custom"></span>
+                                Укр Пошта
+                            </label>
+                            <!-- 2. Змінюємо ID і ховаємо блок за замовчуванням -->
+                            <div id="ukrposhta-fields" class="delivery-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="city-ukr">Місто</label>
+                                    <input type="text" id="city-ukr" name="city-ukr" placeholder="Наприклад, Львів" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="post-office-ukr">Індекс відділення</label>
+                                    <input type="text" id="post-office-ukr" name="post-office-ukr" placeholder="Наприклад, 79008" required>
+                                </div>
+                            </div>
+
+                            <!-- Кур'єр -->
+                            <label class="radio-label">
+                                <input type="radio" name="delivery" value="courier" required>
+                                <span class="radio-custom"></span>
+                                Кур'єром по місту
+                            </label>
+                            <!-- Поля для кур'єра -->
+                            <div id="courier-fields" class="delivery-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="address">Ваша адреса</label>
+                                    <input type="text" id="address" name="address" placeholder="вул. Хрещатик, 1, кв. 5" required>
+                                </div>
+                            </div>
+
+                            <label class="radio-label">
+                                <input type="radio" name="delivery" value="self-delivery" required>
+                                <span class="radio-custom"></span>
+                                Самовивіз
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- ... секція Оплата ... -->
+
+                    <!-- НОВИЙ БЛОК: ОПЛАТА -->
+                    <section>
+                        <h2>3. Оплата</h2>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="card-online" checked required>
+                                <span class="radio-custom"></span>
+                                Оплата карткою онлайн
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="cash-on-delivery" required>
+                                <span class="radio-custom"></span>
+                                Оплата при отриманні
+                            </label>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Права колонка: Склад замовлення (без змін) -->
+                <div class="order-summary">
+                    <h2>Ваше замовлення</h2>
+                    <div id="summary-items-container"></div>
+                    <div class="summary-total">
+                        <strong>Всього:</strong>
+                        <strong id="summary-total">0 грн</strong>
+                    </div>
+                    <a href="thank-you.html" class="confirm-order-btn">Підтвердити замовлення</a>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="components.js"></script>
+    <script src="mainpage.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script> <!-- Специфічний скрипт -->
+</body>
+
+</html>

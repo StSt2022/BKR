@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар - СЯЙВО</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="toast-container"></div>
+    <div class="container">
+        <header id="header-placeholder"></header>
+
+        <!-- ПРАВИЛЬНА СТРУКТУРА -->
+        <main class="page-content">
+            <!-- 1. "Хлібні крихти" тепер знаходяться НАД сіткою -->
+            <nav id="breadcrumbs" class="breadcrumbs breadcrumbs-product"></nav>
+
+            <!-- 2. Сітка містить тільки два елементи: картинку та інформацію -->
+            <div class="product-page">
+                <div class="product-image-container">
+                    <img id="product-image" src="" alt="">
+                </div>
+                <div class="product-info">
+                    <h1 id="product-name">Завантаження...</h1>
+                    <p id="product-description"></p>
+                    <div id="product-price" class="price"></div>
+                    <button id="add-to-cart-btn" class="add-to-cart-button">Додати в кошик</button>
+                </div>
+            </div>
+        </main>
+
+        <div id="footer-placeholder"></div>
+    </div>
+
+    <!-- Підключаємо скрипти -->
+    <script src="notifications.js"></script>
+    <script src="data.js"></script>
+    <script src="components.js"></script>
+    <script src="mainpage.js"></script>
+    <script src="product.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1562 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f5f2;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
+/* Загальний стиль для всіх кнопок та полів вводу */
+button,
+input,
+select {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+a.logo {
+    text-decoration: none;
+    /* Прибираємо підкреслення */
+    color: #333;
+    /* Встановлюємо колір тексту (такий самий, як у звичайного) */
+}
+
+header .search-bar-top {
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 40px;
+}
+
+.search-bar-top {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
+}
+
+.search-bar-top input {
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.search-bar-top button,
+.search-bar-main button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-bar-top button img,
+.search-bar-main button img {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.user-menu img {
+    margin-right: 8px;
+    width: 20px;
+}
+
+main {
+    padding: 0 40px;
+}
+
+.hero {
+    background-image: url('images/hero.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 60px;
+    color: #333;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 20px 0;
+    font-weight: 600; /* Повернемо менш жирний, він краще виглядає */
+    
+    /* 1. Робимо колір трохи темнішим для кращого контрасту */
+    color: #404040; /* Глибокий, але не чорний сірий */
+
+    /* 2. Додаємо ОДНУ м'яку, ледь помітну тінь */
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.search-bar-main {
+    display: inline-flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar-main input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    min-width: 250px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.category-item .icon-bg {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.category-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.category-item p {
+    font-weight: 500;
+    max-width: 120px;
+}
+
+.promo-blocks,
+.product-showcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.promo-item,
+.product-card {
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.promo-item.sale {
+    background-color: #eaf7e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promo-item.sale .promo-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.promo-item.sale .promo-text .discount {
+    font-size: 72px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.promo-item.sale .promo-text p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.promo-item.sale img {
+    height: 300px;
+    width: auto;
+}
+
+.delivery-promo {
+    background-color: #f7f5f2;
+    /* Колір як у фону сторінки */
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-promo .promo-icon {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.delivery-promo h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.delivery-promo p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 80%;
+    /* Щоб текст не розтягувався на всю ширину */
+    margin: 0;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+}
+
+.product-card h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.product-card>img {
+    width: 100%;
+    /* Розтягуємо на всю доступну ширину всередині картки */
+    height: auto;
+    /* Задаємо фіксовану висоту для всіх карток */
+    object-fit: cover;
+    /* Масштабує зображення, щоб воно повністю покрило блок, зберігаючи пропорції (може трохи обрізати) */
+    border-radius: 15px;
+    /* Додаємо заокруглені кути, трохи менші, ніж у самої картки */
+    margin-bottom: 20px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+}
+
+.feature-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.burger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    height: 24px;
+}
+
+.burger-menu img {
+    height: 100%;
+    width: auto;
+}
+
+@media (max-width: 900px) {
+
+    /* --- ШАПКА --- */
+    /* Ховаємо десктопне меню (весь блок посилань) */
+    .mobile-menu-container .user-menu {
+        display: none;
+    }
+
+    .search-bar-top {
+        margin: 0 20px;
+        min-width: 230px;
+        /* Мінімальна ширина для пошуку */
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    /* --- КОНТЕЙНЕР ДЛЯ МОБІЛЬНОГО МЕНЮ --- */
+    .mobile-menu-container {
+        position: relative;
+        /* Ховаємо десктопні посилання, які йдуть в ряд */
+        display: block;
+    }
+
+    .mobile-menu-container>.user-menu a {
+        margin-left: 0;
+        /* Прибираємо десктопний відступ */
+    }
+
+    /* --- ВИПАДАЮЧЕ МЕНЮ (яке з'являється по кліку) --- */
+    .user-menu {
+        position: absolute;
+        top: calc(100% + 10px);
+        /* 100% висоти кнопки + 10px відступу */
+        right: 0;
+
+        width: max-content;
+        /* Ширина по найдовшому елементу всередині */
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        padding: 10px;
+        z-index: 99;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+
+    .user-menu.is-active {
+        display: flex;
+        /* Робимо видимим */
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    /* ФІНАЛЬНИЙ ПРАВИЛЬНИЙ ВАРІАНТ */
+    .user-menu a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0;
+        padding: 8px 12px;
+        border-radius: 6px;
+        /* <--- ЗАЛИШАЄМО, це заокруглює фон */
+        /* width: 100%;  <--- ПРИБИРАЄМО ЦЕЙ РЯДОК */
+        transition: background-color 0.2s ease;
+    }
+
+    /* Додаємо ефект при наведенні */
+    .user-menu a:hover {
+        background-color: #f5f5f5;
+    }
+
+
+    /* --- ОСНОВНИЙ КОНТЕНТ --- */
+    .promo-blocks,
+    .product-showcase {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-item.sale {
+        min-width: 500px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .promo-item.delivery-promo {
+        min-width: 400px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ ФУТЕРА
+========================================
+*/
+
+.site-footer {
+    background-color: #fff;
+    /* <--- ОСЬ РІШЕННЯ */
+    padding: 60px 40px 20px 40px;
+    border-top: 1px solid #e0e0e0;
+    color: #333;
+}
+
+.pre-footer-strip {
+    height: 10px;
+    background-color: #f7f5f2;
+    /* Беремо колір з блоку акції для гармонії */
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 рівні колонки */
+    gap: 30px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.footer-column .footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: text-decoration 0.2s ease;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.copyright-text {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* --- Адаптивність для футера --- */
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        /* 2 колонки на планшетах */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* 1 колонка на мобільних */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        /* Складаємо іконки і текст один під одним */
+        gap: 20px;
+    }
+}
+
+/*
+========================================
+HOVER-ЕФЕКТИ
+========================================
+*/
+
+/* 1. Додаємо плавність переходу для елементів */
+
+/* Для іконок категорій */
+.category-item .icon-bg {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Для карток товарів */
+.product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* 2. Самі ефекти при наведенні миші */
+
+/* Ефект для категорій: легке збільшення та тінь */
+.category-item:hover .icon-bg {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ефект для карток товарів: "підняття" та тінь */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.categories-section {
+    background-color: #fff;
+    padding: 40px 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* І треба скоригувати відступи для .categories всередині */
+.categories {
+    margin-top: 40px;
+    /* Прибираємо старі відступи */
+    padding: 0 80px;
+    /* Додаємо бокові відступи, як у <main> */
+}
+
+/* Робить всю картку клікабельною */
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Переносимо hover-ефект з .product-card на посилання */
+.product-card-link .product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card-link:hover .product-card {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Прибираємо старий hover-ефект, якщо він є */
+.product-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.category-item-link {
+    text-decoration: none;
+    color: inherit;
+    /* Успадковує колір від батьківського елемента */
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ (ОНОВЛЕНО)
+========================================
+*/
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ КАТАЛОГУ (ВИПРАВЛЕНО)
+========================================
+*/
+.catalog-main {
+    padding: 40px;
+    /* <--- ТЕПЕР ВІДСТУПИ ТАКІ Ж, ЯК НА ІНШИХ СТОРІНКАХ */
+}
+
+/* Додаємо стилі для заголовка, щоб він був таким же, як на інших сторінках */
+.catalog-main h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* НОВИЙ АДАПТИВНИЙ ВАРІАНТ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Стиль за замовчуванням (для десктопів) */
+    gap: 30px;
+}
+
+/* Стилі для екранів, вужчих за 900px (планшети) */
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 колонки */
+    }
+}
+
+/* Стилі для екранів, вужчих за 500px (мобільні телефони) */
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+/* СТИЛІ ДЛЯ НОВОГО КОМПОНЕНТА: КАРТОЧКА ТОВАРУ В КАТАЛОЗІ */
+
+.catalog-card {
+    background-color: #fef3f3;
+    /* Дуже світлий, ледь помітний рожевий */
+    border: 2px solid #EAEAEA;
+    /* Трохи темніша, але все ще м'яка рамка */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.catalog-card-image {
+    width: 100%;
+    border: 1px solid #EAEAEA;
+    /* Трохи темніша, але все ще м'яка рамка */
+    height: 210px;
+    /* Фіксована висота для однакового вигляду */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.catalog-card-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    /* Обмежуємо назву двома рядками, щоб уникнути "стрибків" висоти */
+    height: 2.4em;
+    /* Приблизна висота для двох рядків */
+    line-height: 1.2em;
+    overflow: hidden;
+}
+
+.catalog-card-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ ТОВАРУ
+========================================
+*/
+.product-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 40px;
+}
+
+.product-image-container img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+}
+
+
+.product-info h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+.product-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.product-info .price {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.add-to-cart-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #555;
+}
+
+/* Адаптивність для сторінки товару */
+@media (max-width: 768px) {
+    .product-page {
+        grid-template-columns: 1fr;
+        /* Одна колонка на мобільних */
+    }
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ КОШИКА
+========================================
+*/
+.cart-page {
+    padding: 40px;
+}
+
+.cart-page h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.cart-items-container {
+    border-top: 1px solid #e0e0e0;
+}
+
+/* СТИЛІ ДЛЯ ОДНОГО ТОВАРУ В КОШИКУ */
+.cart-item {
+    display: grid;
+    /* Фото | Інфо | Ціна | Видалення */
+    grid-template-columns: 150px 1fr auto auto;
+    gap: 30px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item img {
+    width: 150px;
+    /* Збільшуємо ширину */
+    height: 110px;
+    /* І висоту */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-info h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.cart-item-price {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* КНОПКИ ЗМІНИ КІЛЬКОСТІ */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Трохи збільшимо простір */
+    color: #666;
+    /* Робимо текст трохи світлішим, щоб він не конкурував з назвою */
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.quantity-text {
+    font-weight: 500;
+}
+
+/* КНОПКА ВИДАЛЕННЯ */
+.remove-item-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 24px;
+    color: #999;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.remove-item-btn:hover {
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+/* ПІДСУМОК */
+.cart-summary {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.cart-summary h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+    /* Для посилань краще вказати явно */
+    text-decoration: none;
+    /* <--- ДОДАЙТЕ ЦЕЙ РЯДОК */
+}
+
+.checkout-button:hover {
+    background-color: #555;
+}
+
+.empty-cart-message {
+    padding: 40px 0;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ ПРОФІЛЮ
+========================================
+*/
+.profile-page {
+    padding: 40px;
+}
+
+.profile-page h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.profile-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.profile-card.full-width {
+    grid-column: 1 / -1;
+    /* Розтягуємо на всю ширину */
+}
+
+.profile-card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.profile-card p {
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+}
+
+.address-item {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.address-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/* СТИЛІ ДЛЯ ТАБЛИЦІ ЗАМОВЛЕНЬ */
+#order-history-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#order-history-table th,
+#order-history-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#order-history-table th {
+    font-weight: 600;
+}
+
+/* СТИЛІ ДЛЯ КНОПОК */
+.edit-btn,
+.add-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.edit-btn:hover,
+.add-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/*
+========================================
+ОНОВЛЕНІ СТИЛІ ДЛЯ КАРТКИ ОСОБИСТИХ ДАНИХ
+========================================
+*/
+
+.profile-data-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Перша колонка по ширині контенту, друга займає решту */
+    gap: 10px 20px;
+    /* 10px по вертикалі, 20px по горизонталі */
+    align-items: center;
+}
+
+.data-label {
+    font-weight: 600;
+    /* Робимо мітки жирними */
+    color: #333;
+}
+
+.data-value {
+    color: #666;
+    /* Робимо самі дані трохи світлішими */
+}
+
+/*
+========================================
+АДАПТИВНІСТЬ ДЛЯ СТОРІНКИ ПРОФІЛЮ
+========================================
+*/
+@media (max-width: 768px) {
+    .profile-grid {
+        /* Замість двох колонок робимо одну */
+        grid-template-columns: 1fr;
+    }
+
+    .profile-page {
+        /* Зменшуємо бокові відступи на мобільних */
+        padding: 20px;
+    }
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ ОФОРМЛЕННЯ ЗАМОВЛЕННЯ
+========================================
+*/
+.checkout-page {
+    padding: 40px;
+}
+
+.checkout-page h1 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Ліва колонка вдвічі ширша за праву */
+    gap: 40px;
+}
+
+.checkout-form section {
+    margin-bottom: 40px;
+}
+
+.checkout-form h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    /* Важливо для правильної ширини */
+}
+
+.order-summary {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    height: fit-content;
+    /* Висота по вмісту */
+}
+
+.order-summary h2 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.order-summary .confirm-order-btn {
+    display: block;
+    /* Залишаємо, щоб кнопка була блоковою */
+    /* width: 100%; - ПРИБИРАЄМО ЦЕЙ РЯДОК */
+    background-color: #333;
+    color: #fff !important;
+    border: none;
+    padding: 15px 40px;
+    /* Додамо більше бокового паддінгу для кращого вигляду */
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    margin: 0 auto;
+    /* <--- ДОДАЄМО ЦЕЙ РЯДОК ДЛЯ ЦЕНТРУВАННЯ */
+}
+
+/* Додаємо hover-ефект */
+.order-summary .confirm-order-btn:hover {
+    background-color: #555;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ ОПЦІЙ ВИБОРУ (РАДІОКНОПКИ)
+========================================
+*/
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.radio-label:hover {
+    border-color: #aaa;
+}
+
+/* Ховаємо стандартну радіокнопку */
+.radio-label input[type="radio"] {
+    display: none;
+}
+
+/* Створюємо власну "кастомну" радіокнопку */
+.radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease;
+}
+
+/* Створюємо внутрішню крапку, яка з'являється при виборі */
+.radio-custom::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    transform: scale(0);
+    /* Початковий стан - невидима */
+    transition: transform 0.2s ease;
+}
+
+/* Коли радіокнопка обрана, змінюємо стилі */
+.radio-label input[type="radio"]:checked+.radio-custom {
+    border-color: #333;
+}
+
+.radio-label input[type="radio"]:checked+.radio-custom::after {
+    transform: scale(1);
+    /* Робимо крапку видимою */
+}
+
+.radio-label:has(input:checked) {
+    border-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ДОДАЙТЕ ЦЕ В КІНЕЦЬ index.css */
+.delivery-fields {
+    padding-left: 35px;
+    /* Відступ, щоб поля були під текстом радіокнопки */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-left: 2px solid #f0f0f0;
+}
+
+/*
+========================================
+АДАПТИВНІСТЬ ДЛЯ СТОРІНКИ ОФОРМЛЕННЯ
+========================================
+*/
+@media (max-width: 900px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        grid-row: 2;
+        /* ДОДАЄМО ЦІ СТИЛІ */
+        margin-top: 20px;
+        /* Невеликий відступ зверху на мобільних */
+        padding: 20px;
+        /* Зменшуємо паддінги для мобільних */
+    }
+
+    .confirm-order-btn {
+        display: block;
+        width: 50%;
+    }
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СТОРІНКИ ПОДЯКИ
+========================================
+*/
+.thank-you-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f5f2;
+    /* Той самий фон, що й на інших сторінках */
+}
+
+.thank-you-container {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    /* <--- ЗМІНЮЄМО НА 100% */
+    box-sizing: border-box;
+    /* <--- ДОДАЄМО ЦЕЙ РЯДОК */
+    margin: 0 20px;
+    /* <--- І ДОДАЄМО ЦЕЙ РЯДОК */
+}
+
+.thank-you-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.thank-you-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.thank-you-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0 0 30px 0;
+}
+
+.back-to-home-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.back-to-home-btn:hover {
+    background-color: #555;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ "ЖИВОГО" ПОШУКУ
+========================================
+*/
+.search-container {
+    position: relative;
+    /* Важливо для позиціонування випадаючого списку */
+    margin: 0 40px;
+    /* Зберігаємо відступи */
+}
+
+/* Сам випадаючий список */
+.search-results-list {
+    position: absolute;
+    top: 100%;
+    /* З'являється одразу під полем пошуку */
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    max-height: 400px;
+    overflow-y: auto;
+    display: none;
+    /* Спочатку прихований */
+}
+
+/* Один елемент у списку результатів */
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f9f9f9;
+}
+
+.search-result-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.search-result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-result-name {
+    font-weight: 500;
+}
+
+.search-result-price {
+    font-size: 14px;
+    color: #666;
+}
+
+.search-no-results {
+    padding: 15px;
+    color: #888;
+    text-align: center;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ КНОПОК НА ГОЛОВНОМУ БАНЕРІ
+========================================
+*/
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid #333;
+    /* Тепер обидві мають рамку */
+    transition: all 0.3s ease;
+    text-align: center;
+    /* Центруємо текст одразу */
+    flex-grow: 1;
+    /* Змушує обидві кнопки розтягнутися */
+    max-width: 250px;
+    /* Але обмежуємо максимальну ширину */
+}
+
+.primary-btn,
+.secondary-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+/* Адаптивність для кнопок на банері */
+@media (max-width: 500px) {
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        /* Розтягуємо елементи по ширині */
+    }
+
+    /* .hero-btn тут не потребує змін, бо align-items: stretch вже розтягне посилання */
+}
+
+/*
+========================================
+АДАПТИВНІСТЬ ДЛЯ ГОЛОВНОГО БАНЕРА
+========================================
+*/
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 30px;
+        /* Зменшуємо внутрішні відступи */
+        text-align: center;
+        /* Центруємо весь текст */
+    }
+
+    .hero-content {
+        max-width: 100%;
+        /* Дозволяємо контенту зайняти всю ширину */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        font-weight: 600;
+        /* Значно зменшуємо розмір заголовка */
+    }
+
+    .hero-actions {
+        justify-content: center;
+        /* Центруємо кнопки */
+    }
+}
+
+/*
+========================================
+КОЛЬОРОВЕ КОДУВАННЯ КАТЕГОРІЙ
+========================================
+*/
+
+/* --- Косметика (рожевий) --- */
+.category-cosmetics .catalog-card {
+    background-color: #FFF5F5; /* Дуже світлий рожевий */
+    border-color: #FFDFDF;     /* Трохи темніший рожевий для рамки */
+}
+
+/* --- Прибирання (зелений) --- */
+.category-cleaning .catalog-card {
+    background-color: #F6FFF5; /* Дуже світлий зелений */
+    border-color: #DFFFE0;     /* Трохи темніший зелений для рамки */
+}
+
+/* --- Особиста гігієна (блакитний) --- */
+.category-hygiene .catalog-card {
+    background-color: #F5FCFF; /* Дуже світлий блакитний */
+    border-color: #DFEEFF;     /* Трохи темніший блакитний для рамки */
+}
+
+/* --- Господарські товари (фіолетовий) --- */
+.category-household .catalog-card {
+    background-color: #FBF5FF; /* Дуже світлий фіолетовий */
+    border-color: #EEDBFF;     /* Трохи темніший фіолетовий для рамки */
+}
+
+/* --- Стиль за замовчуванням (для загального каталогу) --- */
+.category-default .catalog-card {
+    background-color: #FAFAFA; /* Нейтральний світло-сірий */
+    border-color: #EAEAEA;
+}
+
+.breadcrumbs-catalog {
+    margin-bottom: 30px; /* Замість padding, використовуємо margin для зовнішнього відступу */
+    font-size: 14px;
+    color: #666;
+}
+.breadcrumbs-product {
+    margin-bottom: 10px;
+    padding-top: 40px; 
+    font-size: 14px;
+    color: #666;
+}
+/* ПРАВИЛЬНИЙ КОД */
+
+/* Застосовуємо стилі до посилань <a> всередині ОБОХ класів */
+.breadcrumbs-catalog a, 
+.breadcrumbs-product a {
+    color: #333;
+    text-decoration: none;
+    transition: text-decoration 0.2s ease;
+}
+
+/* Застосовуємо hover-ефект до посилань <a> всередині ОБОХ класів */
+.breadcrumbs-catalog a:hover, 
+.breadcrumbs-product a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 10px;
+}
+
+/*
+========================================
+СТИЛІ ДЛЯ СПОВІЩЕНЬ (TOASTS)
+========================================
+*/
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
