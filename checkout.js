@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const deliveryRadios = document.querySelectorAll('input[name="delivery"]');
     const novaPoshtaFields = document.getElementById('nova-poshta-fields');
-    const ukrposhtaFields = document.getElementById('ukrposhta-fields'); // Знаходимо новий блок
+    const ukrposhtaFields = document.getElementById('ukrposhta-fields');
     const courierFields = document.getElementById('courier-fields');
 
     deliveryRadios.forEach(radio => {

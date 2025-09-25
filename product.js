@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const categoryNames = {
             cosmetics: "Косметика та парфумерія",
             cleaning: "Засоби для прибирання",
+            hygiene: "Засоби особистої гігієни",
+            household: "Господарські товари"
         };
         const categoryName = categoryNames[product.category];
 
